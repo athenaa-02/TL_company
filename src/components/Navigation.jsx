@@ -28,14 +28,15 @@ function Navigation() {
         </button>
         {/* mobile menu */}
         <div
-          className={`fixed insert-y-0 right-0 w-1/2 h-10 bg-primary-red shadow-xl smooth_transition ${
+          className={`p-5 fixed top-0 right-0 w-1/2 h-screen bg-primary-red shadow-xl smooth_transition ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-<button onClick={() =>setIsOpen(!isOpen)}>
-    <X size={28}/>
-</button>
-
+          <div className="flex justify-end ">
+            <button onClick={() => setIsOpen(!isOpen)} className="text-white">
+              <X size={28} />
+            </button>
+          </div>
         </div>
       </nav>
     </>
