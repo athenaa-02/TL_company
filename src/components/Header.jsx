@@ -1,45 +1,38 @@
 import styled from "styled-components";
-import { colors } from "../styles/colors";
 import { Link } from "react-router-dom";
 
-const HeaderSection = styled.header`
-  height: 100px;
-  background-color: ${colors.primaryRed};
-  display: flex;
-  align-items: center;
-  padding: 0 30px;
-`;
 
-const LogoContainer = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 15px;
-`;
-
-const CompanyName = styled.h1`
-  color: ${colors.basic};
-  font-family: "Montserrat", sans-serif;
-`;
-const Logo = styled.img``;
-
-const HomeLink = styled(Link)`
-  text-decoration: none;
-`;
 
 function Header() {
   return (
     <>
-      <HeaderSection>
-        <HomeLink to="/">
-          <LogoContainer>
-            <Logo
-              src="../../public/tl small logo 1.png"
-              alt="TL Company logo"
-            ></Logo>
-            <CompanyName>TLCompany</CompanyName>
-          </LogoContainer>
-        </HomeLink>
-      </HeaderSection>
+      {/* <HomeLink to="/" >
+        <LogoContainer>
+          <Logo
+            src="../../public/tl small logo 1.png"
+            alt="TL Company logo"
+          ></Logo>
+          <CompanyName>TLCompany</CompanyName>
+        </LogoContainer>
+      </HomeLink> */}
+
+      <header className="h-24 bg-primary-red flex items-center">
+        <div className="container flex items-center">
+          <img
+            src="/public/tl_small_logo.webp"
+            className="h-14"
+            alt="tl company logo"
+          />
+          <h1 className="font-montserrat text-3xl font-bold text-basic ">
+            <span className="gold-text font-bold ">TL</span>Company
+          </h1>
+        </div>
+        <div className="">
+          <nav>
+
+          </nav>
+        </div>
+      </header>
     </>
   );
 }
