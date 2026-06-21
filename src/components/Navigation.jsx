@@ -16,7 +16,13 @@ function Navigation() {
     <>
       <nav>
         {/* desktop navigation */}
-        <div className="md:flex"></div>
+        <div className="hidden md:flex md:gap-6">
+            {
+                navLinks.map((link) =>(
+                    <Link to={link.href} className="min-w-fit">{link.name} </Link>
+                ))
+            }
+        </div>
 
         {/* mobile navigation */}
 
@@ -28,7 +34,7 @@ function Navigation() {
         </button>
         {/* mobile menu */}
         <div
-          className={`p-5 fixed top-0 right-0 w-1/2 h-screen bg-primary-red shadow-xl smooth_transition ${
+          className={`p-5 fixed top-0 right-0 w-1/2 h-screen bg-secondary-red shadow-xl smooth_transition ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
@@ -36,6 +42,18 @@ function Navigation() {
             <button onClick={() => setIsOpen(!isOpen)} className="text-white">
               <X size={28} />
             </button>
+          </div>
+          <div className="p-2 flex flex-col h-full items-center justify-around">
+            {navLinks.map((link) => (
+              <Link
+                to={link.href}
+                key={link.name}
+                onClick={() => setIsOpen(false)}
+                className="text-white font-light"
+              >
+                {link.name}
+              </Link>
+            ))}
           </div>
         </div>
       </nav>

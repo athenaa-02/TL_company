@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 * {
-  /* font-family: "Poppins", sans-serif; */
+  font-family: "Poppins", sans-serif;
 }
 :root {
   --gold-gradient: linear-gradient(to right, #D4A017, #ECBA56, #C6950F);
@@ -17,6 +17,7 @@
 
 /* Custom colors */
   --color-primary-red: #8A314B;
+  /* --color-primary-opacity:rgba(138, 49, 75, 0.98); */
   --color-secondary-red: #7D1A37;
   --color-basic: #EBB9B8;
   --color-accent: #C79028;
