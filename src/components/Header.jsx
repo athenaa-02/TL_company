@@ -9,7 +9,7 @@ function Header() {
         <div className="flex items-center md:gap-4 lg:gap-6 gap-3 ">
           <Link to={"/"}>
             <img
-              src="/public/tl_small_logo.webp"
+              src="/tl_small_logo.webp"
               className="md:h-14 h-11 "
               alt="tl company logo"
             />
