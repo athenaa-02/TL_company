@@ -5,7 +5,7 @@ import About from "./pages/About/About.jsx";
 import AdminPanel from "./pages/AdminPanel/AdminPanel.jsx";
 import Blog from "./pages/Blog/Blog.jsx";
 import Contact from "./pages/Contact/Contact.jsx";
-import PracticeAreas from "./pages/practiceAreas/PracticeAreas.jsx";
+import PracticeAreas from "./pages/PracticeAreas/PracticeAreas.jsx";
 
 function App() {
   return (
