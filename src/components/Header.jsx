@@ -22,6 +22,7 @@ function Header() {
           </Link>
         </div>
         <div className="">
+          
           <Navigation></Navigation>
         </div>
       </header>
