@@ -1,7 +1,10 @@
 
 function Contact() {
   return (
-    <div>Contact</div>
+    <>
+      <Header />
+      <div>blog</div>
+    </>
   )
 }
 

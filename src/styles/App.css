@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap");
@@ -7,7 +7,7 @@
   font-family: "Poppins", sans-serif;
 }
 :root {
-  --gold-gradient: linear-gradient(to right, #D4A017, #ECBA56, #C6950F);
+  --gold-gradient: linear-gradient(to right, #d4a017, #ecba56, #c6950f);
 }
 
 @theme {
@@ -15,40 +15,47 @@
   --font-montserrat: "Montserrat", sans-serif;
   --font-volkhov: "Volkhov", serif;
 
-  
-/* Custom colors */
-  --color-primary-red: #8A314B;
-  --color-secondary-red: #7D1A37;
-  --color-basic: #EBB9B8;
-  --color-accent: #C79028;
+  /* Custom colors */
+  --color-primary-red: #8a314b;
+  --color-secondary-red: #7d1a37;
+  --color-basic: #ebb9b8;
+  --color-accent: #c79028;
   --color-heading: #390516;
   --color-text-basic: #666666;
-  --color-light-yellow: #ECBA56;
+  --color-light-yellow: #ecba56;
   --color-fwhite: #d5c5c5;
 }
-.red{
-  color:#d5c5c5
+.red {
+  color: #d5c5c5;
 }
 
 .gold-text {
   background: var(--gold-gradient);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-   letter-spacing: -1.5px;
+  letter-spacing: -1.5px;
 }
 
-.link-hover:hover{
-    background: var(--gold-gradient);
+.link-hover:hover {
+  background: var(--gold-gradient);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-   
 }
-.smooth_transition{
+.smooth_transition {
   transition: all 500ms;
-
 }
 
-.resizing{
+.resizing {
   transform: scale(1.1);
   transition: all 400ms;
+}
+
+.mobile_bg {
+  background-image: url("/bg_page1_mobile.png");
+
+}
+
+.desktop_bg{
+  background-image: url("/bg_page1_desktop.png");
+
 }

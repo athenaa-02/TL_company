@@ -1,8 +1,10 @@
-
 function PracticeAreas() {
   return (
-    <div>PracticeAreas</div>
-  )
+    <>
+      <Header />
+      <div>PracticeAreas</div>
+    </>
+  );
 }
 
-export default PracticeAreas
+export default PracticeAreas;
