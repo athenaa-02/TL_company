@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home.jsx";
-import ProtectedRoute from "./components/ProtectedRoute.jsx";
+import ProtectedRoute from "./routes/ProtectedRoute.jsx";
 import About from "./pages/About/About.jsx";
 import AdminPanel from "./pages/AdminPanel/AdminPanel.jsx";
 import Blog from "./pages/Blog/Blog.jsx";
