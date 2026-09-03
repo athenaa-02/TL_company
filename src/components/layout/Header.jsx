@@ -1,29 +1,29 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import Navigation from "./Navigation";
+import Navigation from "../navbar/Navigation";
 
 function Header() {
   const [isVisible, setIsVisible] = useState(true);
-const lastScrollY = useRef(0);
-const scrollDelta = useRef(0);
+  const lastScrollY = useRef(0);
+  const scrollDelta = useRef(0);
   const HIDE_THRESHOLD = 200;
-  const DELTA_TO_HIDE = 80
+  const DELTA_TO_HIDE = 80;
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-       const diff = currentScrollY - lastScrollY.current;
+      const diff = currentScrollY - lastScrollY.current;
 
       if (currentScrollY < HIDE_THRESHOLD) {
         // near the top, always show
         setIsVisible(true);
-           scrollDelta.current = 0;
+        scrollDelta.current = 0;
       } else if (diff > 0) {
         // scrolling down
-         scrollDelta.current += diff;
+        scrollDelta.current += diff;
         if (scrollDelta.current > DELTA_TO_HIDE) {
-        setIsVisible(false);
-      }
+          setIsVisible(false);
+        }
       } else {
         // scrolling up
         scrollDelta.current = 0;
@@ -34,8 +34,8 @@ const scrollDelta = useRef(0);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>

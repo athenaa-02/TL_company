@@ -51,12 +51,10 @@
   transition: all 400ms;
 }
 
- @utility mobile_bg {
+@utility mobile_bg {
   background-image: url("/bg_page1_mobile.png");
-
 }
 
-@utility desktop_bg{
+@utility desktop_bg {
   background-image: url("/bg_page1_desktop.png");
-
 }

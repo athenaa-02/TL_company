@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import IconButton from "./IconButton";
+import IconButton from "../common/IconButton";
 
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +20,7 @@ function Navigation() {
     } else {
       document.body.style.overflow = "";
     }
-   return () => {
+    return () => {
       document.body.style.overflow = "";
     };
   }, [isOpen]);
