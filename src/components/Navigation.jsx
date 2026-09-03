@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import IconButton from "./IconButton";
@@ -13,6 +13,18 @@ function Navigation() {
     { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
   ];
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+   return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   return (
     <>
       <nav>
@@ -35,14 +47,14 @@ function Navigation() {
           <Menu size={28} />
         </IconButton>
         {/* mobile menu */}
-      <div
-  onClick={() => setIsOpen(false)}
-  className={`md:hidden fixed inset-0 bg-black/50 backdrop-blur-xs smooth_transition ${
-    isOpen ? "opacity-100 visible" : "opacity-0 invisible"
-  }`}
-/>
         <div
-          className={`md:hidden p-5 fixed top-0 right-0 w-1/2 h-screen bg-secondary-red shadow-xl smooth_transition ${
+          onClick={() => setIsOpen(false)}
+          className={`md:hidden fixed h-screen inset-0 bg-black/65 backdrop-blur-xs smooth_transition  ${
+            isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+          }`}
+        />
+        <div
+          className={`md:hidden p-5 fixed top-0 right-0 w-6/10 h-screen bg-secondary-red shadow-xl smooth_transition ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
