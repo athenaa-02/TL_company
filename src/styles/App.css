@@ -43,12 +43,58 @@
   -webkit-text-fill-color: transparent;
 }
 .smooth_transition {
-  transition: all 500ms;
+  transition: all 800ms;
 }
 
 .resizing {
   transform: scale(1.1);
-  transition: all 400ms;
+  transition: all 1000ms;
+}
+
+@keyframes hero-box-entrance {
+  from {
+    opacity: 0;
+    filter: blur(8px);
+    transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+.hero-box {
+  opacity: 0;
+  animation: hero-box-entrance 1400ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  will-change: opacity, filter, transform;
+}
+
+.hero-box--second {
+  animation-delay: 320ms;
+}
+
+.hero-box--waiting {
+  animation: none;
+  opacity: 0;
+  transform: translateY(80px);
+}
+
+.hero-box--revealed {
+  animation: hero-box-entrance 1400ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-box,
+  .hero-box--second,
+  .hero-box--waiting,
+  .hero-box--revealed {
+    animation: none;
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
 }
 
 @utility mobile_bg {

@@ -40,28 +40,38 @@ function Header() {
   return (
     <>
       <header
-        className={`h-24 p-7 fixed right-0 left-0 top-0 z-50 md:pr-12 md:pl-10 lg:pr-31 lg:pl-16 bg-primary-red flex items-center justify-between smooth_transition ${
+        className={`fixed left-0 right-0 top-0 z-50 h-24 px-0 py-0 transition-transform duration-500 ${
           isVisible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        {" "}
-        <div className="flex items-center md:gap-4 lg:gap-6 gap-3 ">
-          <Link to={"/"}>
+        <div className="flex h-full w-full items-center justify-between border-b border-fwhite/15 bg-heading/95 px-5 shadow-2xl backdrop-blur-md sm:px-8 lg:px-12">
+          <Link to="/" className="group flex items-center gap-3">
             <img
               src="/tl_small_logo.webp"
-              className="md:h-14 h-11 "
+              className="h-10 w-10 object-contain transition-transform duration-300 group-hover:scale-105 sm:h-11 sm:w-11"
               alt="tl company logo"
             />
+            <span className="border-l border-fwhite/25 pl-3">
+              <span className="block font-montserrat text-lg font-bold leading-none text-basic sm:text-xl">
+                <span className="gold-text">TL</span>Company
+              </span>
+              <span className="mt-1 block text-[9px] font-medium uppercase tracking-[0.22em] text-fwhite/65">
+                Legal counsel
+              </span>
+            </span>
           </Link>
-
-          <Link to={"/"}>
-            <h1 className="font-montserrat md:text-3xl text-2xl font-bold text-basic ">
-              <span className="gold-text font-bold ">TL</span>Company
-            </h1>
-          </Link>
-        </div>
-        <div className="">
-          <Navigation></Navigation>
+          <div className="flex items-center gap-4 sm:gap-6">
+            <Navigation />
+            <Link
+              to="/contact"
+              className="hidden items-center gap-2 border-l border-fwhite/20 pl-5 text-xs font-semibold uppercase tracking-[0.16em] text-light-yellow transition-colors duration-300 hover:text-basic lg:flex"
+            >
+              Start a conversation
+              <span aria-hidden="true" className="text-base leading-none">
+                ↗
+              </span>
+            </Link>
+          </div>
         </div>
       </header>
     </>
