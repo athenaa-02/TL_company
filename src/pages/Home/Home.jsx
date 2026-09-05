@@ -9,7 +9,7 @@ function Home() {
         <Header />
       </div>
       <main className="">
-        <div className="mobile_bg xs:desktop_bg bg-fixed h-180 flex w-full justify-center bg-cover bg-no-repeat xs:bg-cover xs:bg-top">
+        <div className="mobile_bg xs:desktop_bg bg-fixed min-h-180 flex w-full justify-center bg-cover bg-no-repeat xs:bg-cover xs:bg-top">
           <HeroSection></HeroSection>
         </div>
 

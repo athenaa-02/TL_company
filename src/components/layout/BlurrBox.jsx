@@ -22,7 +22,7 @@ function BlurrBox() {
     <>
       <div
         ref={boxRef}
-        className={`hero-box hero-box--second mx-auto w-full max-w-md border border-fwhite/25 bg-heading/60 p-6 text-fwhite shadow-2xl backdrop-blur-md sm:p-8 lg:mx-0 lg:mt-48 lg:justify-self-end ${
+        className={`hero-box hero-box--second -mb-20  mx-auto w-full max-w-md border border-fwhite/25 bg-heading/60 p-6 text-fwhite shadow-2xl backdrop-blur-md sm:p-8 lg:top-0 lg:mx-0 lg:mt-48 lg:justify-self-end ${
           hasAppeared ? "hero-box--revealed" : "hero-box--waiting"
         }`}
       >
