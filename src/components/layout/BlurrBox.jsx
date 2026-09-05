@@ -1,15 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ShieldCheck } from "lucide-react";
 
 function BlurrBox() {
+  const boxRef = useRef(null);
   const [hasAppeared, setHasAppeared] = useState(false);
 
   useEffect(() => {
     const revealAfterScroll = () => {
-      if (window.scrollY > 140) {
-        setHasAppeared(true);
-        window.removeEventListener("scroll", revealAfterScroll);
-      }
+      if (window.scrollY < 150) return;
+
+      setHasAppeared(true);
+      window.removeEventListener("scroll", revealAfterScroll);
     };
 
     window.addEventListener("scroll", revealAfterScroll, { passive: true });
@@ -20,7 +21,8 @@ function BlurrBox() {
   return (
     <>
       <div
-        className={`hero-box hero-box--second mx-auto w-full max-w-md border border-fwhite/25 bg-heading/50 p-6 text-fwhite shadow-2xl backdrop-blur-md sm:p-8 lg:mx-0 lg:mt-48 lg:justify-self-end ${
+        ref={boxRef}
+        className={`hero-box hero-box--second mx-auto w-full max-w-md border border-fwhite/25 bg-heading/70 p-6 text-fwhite shadow-2xl backdrop-blur-md sm:p-8 lg:mx-0 lg:mt-48 lg:justify-self-end ${
           hasAppeared ? "hero-box--revealed" : "hero-box--waiting"
         }`}
       >
