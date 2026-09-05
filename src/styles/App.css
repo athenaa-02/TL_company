@@ -88,12 +88,16 @@
 @media (prefers-reduced-motion: reduce) {
   .hero-box,
   .hero-box--second,
-  .hero-box--waiting,
   .hero-box--revealed {
     animation: none;
     opacity: 1;
     filter: none;
     transform: none;
+  }
+
+  .hero-box--waiting {
+    animation: none;
+    opacity: 0;
   }
 }
 
