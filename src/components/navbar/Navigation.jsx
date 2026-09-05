@@ -56,13 +56,20 @@ function Navigation() {
         </IconButton>
         {/* mobile menu */}
         <div
-          className={`md:hidden absolute left-0 right-0 top-full border-b border-light-yellow/20 bg-heading px-5 py-6 shadow-2xl transition-[opacity,visibility,transform] duration-300 sm:px-8 ${
-            isOpen
-              ? "visible translate-y-0 opacity-100"
-              : "invisible -translate-y-2 opacity-0"
+          onClick={() => setIsOpen(false)}
+          className={`fixed inset-0 h-screen bg-black/55 backdrop-blur-md transition-opacity duration-300 md:hidden ${
+            isOpen ? "visible opacity-100" : "invisible opacity-0"
+          }`}
+        />
+        <div
+          className={`fixed right-0 top-0 h-screen w-[min(82vw,22rem)] border-l border-light-yellow/20 bg-heading/95 p-5 shadow-2xl backdrop-blur-md transition-transform duration-500 md:hidden ${
+            isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          <div className="flex justify-end">
+          <div className="flex items-center justify-between border-b border-fwhite/15 pb-4">
+            <span className="font-montserrat text-sm font-semibold uppercase tracking-[0.2em] text-light-yellow">
+              Menu
+            </span>
             <IconButton
               onClick={() => setIsOpen(false)}
               aria-label="Close navigation menu"
