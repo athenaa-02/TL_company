@@ -1,6 +1,7 @@
 import Header from "../../components/layout/Header";
 import HeroSection from "../../components/layout/HeroSection";
 import PinkSection from "../../components/common/PinkSection";
+import PracticalAreasGeneral from "../../components/layout/PracticalAreasGeneral";
 
 function Home() {
   return (
@@ -14,6 +15,7 @@ function Home() {
         </div>
 
         <PinkSection></PinkSection>
+        <PracticalAreasGeneral></PracticalAreasGeneral>
       </main>
     </>
   );
