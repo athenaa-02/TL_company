@@ -35,7 +35,7 @@ function Navigation() {
             <Link
               to={link.href}
               key={link.name}
-              className={`min-w-fit rounded-sm px-3 py-2 text-xs font-medium transition-colors duration-300 lg:px-4 ${
+              className={`min-w-fit rounded-sm px-3 py-2 text-xs font-medium transition-colors duration-500 lg:px-4 ${
                 location.pathname === link.href
                   ? "bg-accent text-heading"
                   : "text-fwhite hover:bg-primary-red/70 hover:text-basic"
@@ -57,12 +57,12 @@ function Navigation() {
         {/* mobile menu */}
         <div
           onClick={() => setIsOpen(false)}
-          className={`fixed inset-0 h-screen bg-black/55 backdrop-blur-md transition-opacity duration-300 md:hidden ${
-            isOpen ? "visible opacity-100" : "invisible opacity-0"
+          className={`fixed inset-0 h-screen bg-black/55 backdrop-blur-md transition-opacity duration-500 md:hidden ${
+            isOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
           }`}
         />
         <div
-          className={`fixed right-0 top-0 h-screen w-[min(82vw,22rem)] border-l border-light-yellow/20 bg-heading/95 p-5 shadow-2xl backdrop-blur-md transition-transform duration-500 md:hidden ${
+          className={`fixed right-0 top-0 h-screen w-[min(82vw,22rem)] border-l border-light-yellow/20 bg-heading/95 p-5 shadow-2xl backdrop-blur-md transition-transform duration-800 md:hidden ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
@@ -83,7 +83,7 @@ function Navigation() {
                 to={link.href}
                 key={link.name}
                 onClick={() => setIsOpen(false)}
-                className={`border-b border-fwhite/10 px-4 py-4 font-montserrat text-lg transition-colors duration-300 ${
+                className={`border-b border-fwhite/10 px-4 py-4 font-montserrat text-lg transition-colors duration-500 ${
                   location.pathname === link.href
                     ? "text-light-yellow"
                     : "text-fwhite hover:text-basic"
