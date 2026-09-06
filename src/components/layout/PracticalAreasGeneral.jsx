@@ -3,12 +3,19 @@ import PracticeAreasPaper from "./PracticeAreasPaper";
 function PracticalAreasGeneral() {
   return (
     <>
-      <picture className="block w-full">
-        <source media="(min-width: 425px)" srcSet="/columns-desktop.png" />
+      <picture className="block w-full ">
+        <source
+          media="(min-width: 1200px)"
+          srcSet="/columns/columns-big-desktop.png"
+        />
+        <source
+          media="(min-width: 425px)"
+          srcSet="/columns/columns-desktop.png"
+        />
         <img
-          src="/columns-mobile.png"
+          src="/columns/columns-mobile.png"
           alt="Our practice areas"
-          className="block h-auto w-full"
+          className="block h-auto w-full m-auto lg:max-h-150 lg:max-w-500"
         />
       </picture>
       <section
