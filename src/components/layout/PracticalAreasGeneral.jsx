@@ -15,11 +15,11 @@ function PracticalAreasGeneral() {
         <img
           src="/columns/columns-mobile.png"
           alt="Our practice areas"
-          className="block h-auto w-full m-auto lg:max-h-150 lg:max-w-500"
+          className="block h-auto w-full m-auto max-h-130 lg:max-h-150 lg:max-w-500"
         />
       </picture>
       <section
-        className="relative z-0 w-full overflow-visible bg-primary-red px-6 py-16 text-basic sm:px-32 sm:py-20"
+        className="relative z-0 w-full overflow-visible bg-primary-red  py-16 text-basic  sm:py-20"
         aria-label="Practice areas"
       >
         <PracticeAreasPaper></PracticeAreasPaper>
