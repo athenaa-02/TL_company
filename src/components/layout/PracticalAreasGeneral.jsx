@@ -1,9 +1,8 @@
+import PracticeAreasPaper from "./PracticeAreasPaper";
+
 function PracticalAreasGeneral() {
   return (
-    <section
-      className="w-full overflow-hidden bg-heading"
-      aria-label="Practice areas"
-    >
+    <>
       <picture className="block w-full">
         <source media="(min-width: 425px)" srcSet="/columns-desktop.png" />
         <img
@@ -12,7 +11,23 @@ function PracticalAreasGeneral() {
           className="block h-auto w-full"
         />
       </picture>
-    </section>
+      <section
+        className="relative z-0 w-full overflow-visible bg-primary-red px-6 py-16 text-basic sm:px-32 sm:py-20"
+        aria-label="Practice areas"
+      >
+        <PracticeAreasPaper></PracticeAreasPaper>
+
+        <div className="mx-auto mt-24 max-w-xl text-center sm:mt-32">
+          <h2 className="font-volkhov text-2xl font-bold leading-tight sm:text-3xl">
+            Request a Free Case Review
+            <span className="block">No Cost, No Obligation</span>
+          </h2>
+          <p className="mt-8 text-sm text-fwhite">500 Terry Francine Street</p>
+          <p className="text-sm text-fwhite">San Francisco, CA 94158</p>
+          <p className="mt-5 text-sm text-fwhite">Tel: 123-456-7890</p>
+        </div>
+      </section>
+    </>
   );
 }
 
