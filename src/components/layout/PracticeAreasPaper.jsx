@@ -9,7 +9,7 @@ const practiceAreas = [
 
 function PracticeAreasPaper() {
   return (
-    <div className="relative z-10 mx-auto -mt-43.25 box-border w-full max-w-232.75 flex flex-col items-center outline-1 outline-accent   -outline-offset-15 bg-white px-6 py-12 text-heading sm:-mt-67 sm:px-10 sm:py-16 lg:px-16">
+    <div className="relative z-10 mx-auto -mt-43.25 lg:-mt-80 xl:-mt-60 2xl:-mt-80 box-border w-full max-w-232.75 flex flex-col items-center outline-1 outline-accent   -outline-offset-15 bg-white px-6 py-12 text-heading sm:-mt-67 sm:px-10 sm:py-16 lg:px-16">
       <div className="mx-auto max-w-3xl text-center flex flex-col items-center">
     <div className="w-px h-25 bg-heading"></div>
         <h2 className="mt-3 font-volkhov text-3xl font-bold leading-tight sm:text-4xl">
