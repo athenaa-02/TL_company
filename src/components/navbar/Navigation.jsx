@@ -30,7 +30,7 @@ function Navigation() {
     <>
       <nav>
         {/* desktop navigation */}
-        <div className="hidden items-center gap-1 rounded-sm border border-fwhite/10 bg-primary-red/35 p-1 md:flex">
+        <div className="hidden items-center gap-1 rounded-sm border border-fwhite/10 bg-primary-red/50 p-1 md:flex">
           {navLinks.map((link) => (
             <Link
               to={link.href}

@@ -6,8 +6,6 @@ function LawyersGeneral() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  console.log(supabase)
-
   useEffect(() => {
     async function fetchLawyers() {
       try {
@@ -23,22 +21,26 @@ function LawyersGeneral() {
         setLoading(false);
       }
     }
-    fetchLawyers()
+    fetchLawyers();
   }, []);
 
-  if(loading) return <div className="h-200"></div>
-  if(error) return <div className="h-200"></div>
+  if (loading) return <div className="h-200"></div>;
+  if (error) return <div className="h-200"></div>;
 
-  return <>
-  <div>
-{lawyers.map((lawyer) =>(
-<div key={lawyer.id} >
-    <h3 className="font-bold">{lawyer.full_name}</h3>
-</div>
-))}
-
-  </div>
-  </>;
+  return (
+    <>
+      <div>
+        {lawyers.map((lawyer) => (
+            <div key={lawyer.id}>
+          <div className="w-79.25 h-113.25">
+              <img src={lawyer.photo_url} className="w-full h-full object-cover" alt="" />
+            </div>
+            <h3 className="font-bold">{lawyer.full_name}</h3>
+          </div>
+        ))}
+      </div>
+    </>
+  );
 }
 
 export default LawyersGeneral;
