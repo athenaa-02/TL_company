@@ -4,6 +4,7 @@ import PinkSection from "../../components/common/PinkSection";
 import PracticalAreasGeneral from "../../components/layout/PracticalAreasGeneral";
 import LawyersGeneral from "../../components/lawyers/LawyersGeneral";
 import TestimonialSection from "../../components/layout/QuizSection";
+import Footer from "../../components/layout/Footer";
 
 function Home() {
   return (
@@ -21,6 +22,7 @@ function Home() {
         <LawyersGeneral></LawyersGeneral>
         <TestimonialSection></TestimonialSection>
       </main>
+      <Footer />
     </>
   );
 }
