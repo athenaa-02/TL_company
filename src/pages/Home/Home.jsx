@@ -3,6 +3,7 @@ import HeroSection from "../../components/layout/HeroSection";
 import PinkSection from "../../components/common/PinkSection";
 import PracticalAreasGeneral from "../../components/layout/PracticalAreasGeneral";
 import LawyersGeneral from "../../components/lawyers/LawyersGeneral";
+import TestimonialSection from "../../components/feedback/TestimonialSection";
 
 function Home() {
   return (
@@ -18,6 +19,7 @@ function Home() {
         <PinkSection></PinkSection>
         <PracticalAreasGeneral></PracticalAreasGeneral>
         <LawyersGeneral></LawyersGeneral>
+        <TestimonialSection></TestimonialSection>
       </main>
     </>
   );
