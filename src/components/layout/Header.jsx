@@ -47,7 +47,7 @@ function Header() {
         <div className="flex h-full w-full items-center justify-between border-b border-fwhite/15 bg-heading/95 px-5 shadow-2xl backdrop-blur-md sm:px-8 lg:px-12">
           <Link to="/" className="group flex items-center gap-3">
             <img
-              src="/tl_small_logo.webp"
+              src="homepage/tl_small_logo.webp"
               className="h-10 w-10 object-contain transition-transform duration-300 group-hover:scale-105 sm:h-11 sm:w-11"
               alt="tl company logo"
             />

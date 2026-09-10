@@ -35,13 +35,13 @@ function BlurrBox() {
         <div className="mt-7 flex justify-around  border-t border-fwhite/20 pt-6">
           <img
             className="h-26 w-26 rounded-full"
-            src="/giorgi.jpg"
+            src="homepage/giorgi.jpg"
             alt=""
           />
 
           <img
             className=" h-26 w-26 rounded-full"
-            src="/keti.jpg"
+            src="homepage/keti.jpg"
             alt=""
           />
         </div>
