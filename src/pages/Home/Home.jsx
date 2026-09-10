@@ -3,7 +3,7 @@ import HeroSection from "../../components/layout/HeroSection";
 import PinkSection from "../../components/common/PinkSection";
 import PracticalAreasGeneral from "../../components/layout/PracticalAreasGeneral";
 import LawyersGeneral from "../../components/lawyers/LawyersGeneral";
-import TestimonialSection from "../../components/feedback/TestimonialSection";
+import TestimonialSection from "../../components/layout/QuizSection";
 
 function Home() {
   return (
