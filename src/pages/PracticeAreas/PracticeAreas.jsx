@@ -1,7 +1,7 @@
 function PracticeAreas() {
   return (
     <>
-      <Header />
+      
       <div>PracticeAreas</div>
     </>
   );

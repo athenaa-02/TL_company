@@ -4,13 +4,12 @@ import PinkSection from "../../components/common/PinkSection";
 import PracticalAreasGeneral from "../../components/layout/PracticalAreasGeneral";
 import LawyersGeneral from "../../components/lawyers/LawyersGeneral";
 import TestimonialSection from "../../components/layout/QuoteSection";
-import Footer from "../../components/layout/Footer";
 
 function Home() {
   return (
     <>
       <div className="h-24 relative">
-        <Header />
+      
       </div>
       <main className="">
         <div className="mobile_bg xs:desktop_bg bg-fixed min-h-180 flex w-full justify-center bg-cover bg-no-repeat xs:bg-cover xs:bg-top">
@@ -22,7 +21,7 @@ function Home() {
         <LawyersGeneral></LawyersGeneral>
         <TestimonialSection></TestimonialSection>
       </main>
-      <Footer />
+      
     </>
   );
 }

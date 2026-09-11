@@ -60,7 +60,6 @@ function Footer() {
           </h2>
           <address className="mt-5 space-y-2 text-sm not-italic leading-6 text-fwhite/80">
             <p>500 Terry Francine Street</p>
-            <p>San Francisco, CA 94158</p>
             <a
               className="block pt-3 transition-colors duration-300 hover:text-basic"
               href="tel:1234567890"
