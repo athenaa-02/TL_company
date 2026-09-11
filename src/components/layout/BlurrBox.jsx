@@ -7,7 +7,7 @@ function BlurrBox() {
 
   useEffect(() => {
     const revealAfterScroll = () => {
-      if (window.scrollY < 150) return;
+      if (window.scrollY < 80) return;
 
       setHasAppeared(true);
       window.removeEventListener("scroll", revealAfterScroll);
