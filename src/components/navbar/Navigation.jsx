@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import IconButton from "../common/IconButton";
@@ -16,11 +17,7 @@ function Navigation() {
   ];
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    document.body.style.overflow = isOpen ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
     };
@@ -29,7 +26,7 @@ function Navigation() {
   return (
     <>
       <nav>
-        {/* desktop navigation */}
+        {/* desktop navigation stays exactly as-is */}
         <div className="hidden items-center gap-1 rounded-sm border border-fwhite/10 bg-primary-red/50 p-1 md:flex">
           {navLinks.map((link) => (
             <Link
@@ -46,55 +43,61 @@ function Navigation() {
           ))}
         </div>
 
-        {/* mobile navigation */}
-
         <IconButton
           onClick={() => setIsOpen(!isOpen)}
           aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
         >
           <Menu size={24} />
         </IconButton>
-        {/* mobile menu */}
-        <div
-          onClick={() => setIsOpen(false)}
-          className={`fixed inset-0 h-screen bg-black/55 backdrop-blur-md transition-opacity duration-500 md:hidden ${
-            isOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
-          }`}
-        />
-        <div
-          className={`fixed right-0 top-0 h-screen w-[min(82vw,22rem)] border-l border-light-yellow/20 bg-heading/95 p-5 shadow-2xl backdrop-blur-md transition-transform duration-800 md:hidden ${
-            isOpen ? "translate-x-0" : "translate-x-full"
-          }`}
-        >
-          <div className="flex items-center justify-between border-b border-fwhite/15 pb-4">
-            <span className="font-montserrat text-sm font-semibold uppercase tracking-[0.2em] text-light-yellow">
-              Menu
-            </span>
-            <IconButton
-              onClick={() => setIsOpen(false)}
-              aria-label="Close navigation menu"
-            >
-              <X size={28} />
-            </IconButton>
-          </div>
-          <div className="flex h-full flex-col items-stretch justify-center gap-3 p-2">
-            {navLinks.map((link) => (
-              <Link
-                to={link.href}
-                key={link.name}
-                onClick={() => setIsOpen(false)}
-                className={`border-b border-fwhite/10 px-4 py-4 font-montserrat text-lg transition-colors duration-500 ${
-                  location.pathname === link.href
-                    ? "text-light-yellow"
-                    : "text-fwhite hover:text-basic"
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
-        </div>
       </nav>
+
+      {/* mobile overlay + panel rendered outside Header's transformed DOM tree */}
+      {createPortal(
+        <>
+          <div
+            onClick={() => setIsOpen(false)}
+            className={`fixed inset-0 h-screen bg-black/55 backdrop-blur-md transition-opacity duration-500 md:hidden z-[60] ${
+              isOpen
+                ? "pointer-events-auto opacity-100"
+                : "pointer-events-none opacity-0"
+            }`}
+          />
+          <div
+            className={`fixed right-0 top-0 h-screen w-[min(82vw,22rem)] border-l border-light-yellow/20 bg-heading/95 p-5 shadow-2xl backdrop-blur-md transition-transform duration-800 md:hidden z-[70] ${
+              isOpen ? "translate-x-0" : "translate-x-full"
+            }`}
+          >
+            <div className="flex items-center justify-between border-b border-fwhite/15 pb-4">
+              <span className="font-montserrat text-sm font-semibold uppercase tracking-[0.2em] text-light-yellow">
+                Menu
+              </span>
+              <IconButton
+                onClick={() => setIsOpen(false)}
+                aria-label="Close navigation menu"
+              >
+                <X size={28} />
+              </IconButton>
+            </div>
+            <div className="flex h-full flex-col items-stretch justify-center gap-3 p-2">
+              {navLinks.map((link) => (
+                <Link
+                  to={link.href}
+                  key={link.name}
+                  onClick={() => setIsOpen(false)}
+                  className={`border-b border-fwhite/10 px-4 py-4 font-montserrat text-lg transition-colors duration-500 ${
+                    location.pathname === link.href
+                      ? "text-light-yellow"
+                      : "text-fwhite hover:text-basic"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </>,
+        document.body,
+      )}
     </>
   );
 }
