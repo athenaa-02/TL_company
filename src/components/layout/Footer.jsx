@@ -11,7 +11,7 @@ const footerLinks = [
 function Footer() {
   return (
     <footer className="bg-heading px-6 pb-6 pt-14 text-fwhite sm:px-10 lg:px-12">
-      <div className="mx-auto grid max-w-300 gap-12 border-b border-fwhite/20 pb-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr] lg:gap-16">
+      <div className="mx-auto grid max-w-300  gap-12 border-b border-fwhite/20 pb-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr] lg:gap-16">
         <div>
           <Link to="/" className="inline-flex items-center gap-3">
             <img
@@ -39,7 +39,7 @@ function Footer() {
             Explore
           </h2>
           <nav
-            className="mt-5 flex flex-col items-start gap-3 text-sm"
+            className="mt-5 flex flex-col items-start gap- text-sm"
             aria-label="Footer navigation"
           >
             {footerLinks.map((link) => (

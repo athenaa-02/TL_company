@@ -4,15 +4,17 @@ import ProtectedRoute from "./routes/ProtectedRoute.jsx";
 import About from "./pages/About/About.jsx";
 import AdminPanel from "./pages/AdminPanel/AdminPanel.jsx";
 import Blog from "./pages/Blog/Blog.jsx";
-import Footer from "./components/layout/Footer.jsx"
+import Footer from "./components/layout/Footer.jsx";
 import Header from "./components/layout/Header.jsx";
 import Contact from "./pages/Contact/Contact.jsx";
 import PracticeAreas from "./pages/PracticeAreas/PracticeAreas.jsx";
+import SocialRail from "./components/common/SocialRail.jsx";
 
 function App() {
   return (
     <>
       <Header />
+      <SocialRail />
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
