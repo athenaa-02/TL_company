@@ -56,14 +56,14 @@ function Navigation() {
         <>
           <div
             onClick={() => setIsOpen(false)}
-            className={`fixed inset-0 h-screen bg-black/55 backdrop-blur-md transition-opacity duration-500 md:hidden z-[60] ${
+            className={`fixed inset-0 h-screen bg-black/80 backdrop-blur-sm transition-opacity duration-500 md:hidden z-60 ${
               isOpen
                 ? "pointer-events-auto opacity-100"
                 : "pointer-events-none opacity-0"
             }`}
           />
           <div
-            className={`fixed right-0 top-0 h-screen w-[min(82vw,22rem)] border-l border-light-yellow/20 bg-heading/95 p-5 shadow-2xl backdrop-blur-md transition-transform duration-800 md:hidden z-[70] ${
+            className={`fixed right-0 top-0 h-screen xs:w-[min(60%)] sm:w-[min(50%)] w-[min(70%)]  border-l border-light-yellow/20 bg-heading/95 p-5 shadow-2xl backdrop-blur-md transition-transform duration-800 md:hidden z-[70] ${
               isOpen ? "translate-x-0" : "translate-x-full"
             }`}
           >
