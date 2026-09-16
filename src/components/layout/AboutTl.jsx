@@ -1,5 +1,5 @@
 
-import AboutTlBox from "./AboutTlBox";
+
 
 function AboutTl() {
   return (
@@ -39,7 +39,7 @@ function AboutTl() {
             </div>
           </div>
         </section>
-        <AboutTlBox />
+        
       </main>
     </>
   );
