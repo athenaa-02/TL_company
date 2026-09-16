@@ -1,10 +1,11 @@
-import Header from "../../components/layout/Header"
+import AboutTl from "../../components/layout/AboutTl"
 
 function About() {
+
   return (
         <>
     
-      <div>about</div>
+  <AboutTl></AboutTl>
       
     </>
   )
