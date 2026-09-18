@@ -4,7 +4,7 @@
 function AboutTl() {
   return (
     <>
-      <main className="bg-white pt-24 text-text-basic">
+      <div className="bg-white pt-24 text-text-basic">
         <section className="relative flex min-h-[calc(100vh-6rem)] justify-center overflow-hidden px-6 py-24 text-center sm:px-10 lg:px-16">
           <div className="absolute bottom-0 left-[12%] top-0 w-2 bg-accent" />
           <div className="relative z-10 w-full max-w-235">
@@ -18,7 +18,7 @@ function AboutTl() {
               <p>
                 We ensure that you&apos;ll embark on a perfectly planned, safe
                 vacation at a price you can afford.
-              </p>
+              </p> 
               <p>
                 We ensure that you&apos;ll embark on a perfectly planned, safe
                 vacation at a price you can afford.
@@ -40,7 +40,7 @@ function AboutTl() {
           </div>
         </section>
         
-      </main>
+      </div>
     </>
   );
 }
