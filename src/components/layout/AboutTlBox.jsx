@@ -16,13 +16,13 @@ function AboutTlBox() {
         <div className="mt-14 max-w-235 space-y-6 text-lg leading-8 text-text-basic">
           <p>
             I&apos;m a paragraph. Click here to add your own text and edit me.
-            It&apos;s easy. Just click &quot;Edit Text&quot; or double click me to
-            add your own content and make changes to the font.
+            It&apos;s easy. Just click &quot;Edit Text&quot; or double click me
+            to add your own content and make changes to the font.
           </p>
           <p>
             I&apos;m a paragraph. Click here to add your own text and edit me.
-            It&apos;s easy. Just click &quot;Edit Text&quot; or double click me to
-            add your own content and make changes to the font.
+            It&apos;s easy. Just click &quot;Edit Text&quot; or double click me
+            to add your own content and make changes to the font.
           </p>
         </div>
       </div>
