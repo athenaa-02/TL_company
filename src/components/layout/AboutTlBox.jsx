@@ -1,7 +1,7 @@
 function AboutTlBox() {
   return (
     <section
-      className="mx-auto bg-[#f7e3e3] px-9 py-16 text-left sm:px-16 sm:py-20 md:h-125.5 md:w-138.25 lg:px-18 "
+      className="relative z-10   -mt-10 bg-[#f7e3e3] px-9 py-16 text-left sm:-mt-24 sm:px-16 sm:py-20 md:-mt-90 md:h-125.5 md:w-138.25 lg:px-18"
       aria-labelledby="about-tl-box-title"
       data-node-id="4061:182"
     >
