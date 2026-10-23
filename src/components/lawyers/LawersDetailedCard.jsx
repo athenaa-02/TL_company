@@ -9,7 +9,7 @@ function LawersDetailedCard({ data }) {
   } = data;
 
   return (
-    <section className="bg-white px-6 py-16 sm:px-10 md:py-24">
+    <section className="bg-white px-116 py-16 sm:px-6 md:py-10">
       <article className="mx-auto flex w-full max-w-[1020px] flex-col gap-8 md:flex-row md:items-center md:gap-12 lg:gap-16">
         <div className="order-2 flex-1 space-y-6 md:order-1">
           <div>
@@ -23,6 +23,10 @@ function LawersDetailedCard({ data }) {
               Accusantium consequuntur voluptate earum numquam labore deserunt
               distinctio, harum tempora ducimus ullam, nemo eos ratione vel
               corporis, eius eligendi voluptates possimus mollitia!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Accusantium consequuntur voluptate earum numquam labore deserunt
+              distinctio, harum tempora ducimus ullam, nemo eos ratione vel
+              corporis, eius eligendi 
             </p>
           </div>
           <div>
@@ -31,6 +35,7 @@ function LawersDetailedCard({ data }) {
             </h4>
             <p className="mt-3 text-xs leading-[1.8] text-text-basic sm:text-[13px]">
              {primary_practice_area}
+            
               </p>
           </div>
         </div>

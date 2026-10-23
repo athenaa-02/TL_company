@@ -2,7 +2,7 @@ import { supabase } from "../lib/supabaseClient";
 import { useState, useEffect } from "react";
 
 export default function useFetch(URL) {
-  const [lawyers, setLawyers] = useState([]);
+  const [data, setLawyers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -23,6 +23,6 @@ export default function useFetch(URL) {
     }
     getLawyers();
   }, []);
- return { lawyers, loading, error };
+ return { data, loading, error };
 }
 
