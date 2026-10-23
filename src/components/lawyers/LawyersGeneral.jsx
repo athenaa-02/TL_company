@@ -1,29 +1,10 @@
-import { supabase } from "../../lib/supabaseClient";
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import useFetch from "../../hooks/useFetch";
 
 function LawyersGeneral() {
-  const [lawyers, setLawyers] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const { lawyers, loading, error } = useFetch();
 
-  useEffect(() => {
-    async function fetchLawyers() {
-      try {
-        setLoading(true);
-
-        const { data, error } = await supabase.from("lawyers").select("*");
-        if (error) throw error;
-        setLawyers(data);
-      } catch (error) {
-        console.log(error);
-        setError(error.message);
-      } finally {
-        setLoading(false);
-      }
-    }
-    fetchLawyers();
-  }, []);
+  console.log(lawyers);
 
   if (loading) return <div className="h-200"></div>;
   if (error) return <div className="h-200"></div>;
@@ -46,7 +27,7 @@ function LawyersGeneral() {
               </h3>
               <div className="w-70 md:w-74.25 border border-accent p-4">
                 <p className="line-clamp-3 text-heading"> {lawyer.bio}</p>
-                 </div>
+              </div>
             </div>
           </Link>
         ))}
