@@ -4,7 +4,7 @@ import useFetch from "../../hooks/useFetch";
 function LawyersGeneral() {
   const { lawyers, loading, error } = useFetch();
 
-  console.log(lawyers);
+
 
   if (loading) return <div className="h-200"></div>;
   if (error) return <div className="h-200"></div>;

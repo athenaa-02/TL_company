@@ -1,34 +1,18 @@
-import { supabase } from "../../lib/supabaseClient";
-import { useState, useEffect } from "react";
 import LawersDetailedCard from "./LawersDetailedCard";
+import useFetch from "../../hooks/useFetch";
 
 function LawyersBioCard() {
-  const [lawyersBio, setLawyersBio] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const {lawyers, loading, error} = useFetch()
 
-  useEffect(() => {
-    async function getLawyers() {
-      try {
-        setLoading(true);
-        const response = await supabase.from("lawyers").select("*");
-        const data = response.data;
-        if (response.error) throw error;
-        console.log(data);
-        setLawyersBio(data);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    }
-    // getLawyers()
-  }, []);
 
-  //   console.log(lawyersBio)
+  if(error) throw error
+
+  //i should add loading state checking here
   return (
     <>
-  <LawersDetailedCard ></LawersDetailedCard>
+ {lawyers.map((lawyer) =>(
+ <LawersDetailedCard data={lawyer}></LawersDetailedCard>
+ ))}
 
     </>
   );
