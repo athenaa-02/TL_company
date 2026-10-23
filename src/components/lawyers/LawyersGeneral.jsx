@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 
 function LawyersGeneral() {
-  const { lawyers, loading, error } = useFetch();
+  const { lawyers, loading, error } = useFetch("lawyers");
 
 
-
+//i should make a good loader 
   if (loading) return <div className="h-200"></div>;
   if (error) return <div className="h-200"></div>;
 
