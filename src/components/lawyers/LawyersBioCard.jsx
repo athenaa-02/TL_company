@@ -9,8 +9,12 @@ function LawyersBioCard() {
   //i should add loading state checking here
   return (
     <>
-      {data.map((lawyer) => (
-        <LawersDetailedCard key={lawyer.id} data={lawyer}></LawersDetailedCard>
+      {data.map((lawyer, index) => (
+        <LawersDetailedCard
+          key={lawyer.id}
+          data={lawyer}
+          reverse={index % 2 !== 0}
+        ></LawersDetailedCard>
       ))}
     </>
   );

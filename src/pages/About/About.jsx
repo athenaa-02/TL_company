@@ -2,7 +2,8 @@ import AboutTl from "../../components/layout/AboutTl";
 import AboutTlBox from "../../components/layout/AboutTlBox";
 import LawyersBioCard from "../../components/lawyers/LawyersBioCard";
 import ValuesBar from "../../components/common/ValuesBar";
-
+import QuoteSection from "../../components/layout/QuoteSection";
+import MapSection from "../../components/common/MapSection";
 
 function About() {
   return (
@@ -14,9 +15,11 @@ function About() {
           <AboutTlBox />
         </div>
         <div className="mt-24 mb-24">
-          <LawyersBioCard/>
+          <LawyersBioCard />
         </div>
         <ValuesBar></ValuesBar>
+        <QuoteSection></QuoteSection>
+        <MapSection></MapSection>
       </main>
     </>
   );
