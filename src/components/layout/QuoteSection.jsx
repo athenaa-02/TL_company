@@ -26,7 +26,7 @@ function TestimonialSection() {
     <section
       ref={sectionRef}
       className="relative flex bg-position-[10%] min-h-130 items-center justify-center overflow-hidden bg-cover bg-fixed bg-secondary-red px-6 py-20 sm:min-h-140 sm:px-10"
-      style={{ backgroundImage: "url('/homepage/office.png')" }}
+      style={{ backgroundImage: "url('/homepage/office.webp')" }}
       aria-label="Testimonial"
     >
       <blockquote
