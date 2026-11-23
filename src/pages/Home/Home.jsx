@@ -10,7 +10,7 @@ function Home() {
   return (
     <>
       <div className="h-24 relative"></div>
-      <main className="">
+    
         <div className="mobile_bg xs:desktop_bg bg-fixed min-h-180 flex w-full justify-center bg-cover bg-no-repeat xs:bg-cover xs:bg-top">
           <HeroSection></HeroSection>
         </div>
@@ -21,7 +21,7 @@ function Home() {
         <LawyersGeneral></LawyersGeneral>
         <TestimonialSection></TestimonialSection>
         <MapSection></MapSection>
-      </main>
+     
     </>
   );
 }

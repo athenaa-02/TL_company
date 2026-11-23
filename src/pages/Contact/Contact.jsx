@@ -16,7 +16,7 @@ function Contact() {
       />
       <Columns></Columns>
       <section
-        className="relative z-0 w-full overflow-visible bg-primary-red  py-16 text-basic  sm:py-20"
+        className=" w-full overflow-visible bg-primary-red  pb-16 pt-1 text-basic  sm:pt-1 sm:pb-24"
         aria-label="Practice areas"
       >
         <FreeRequestOffer></FreeRequestOffer>

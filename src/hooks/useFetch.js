@@ -13,7 +13,6 @@ export default function useFetch(URL) {
         const {data, error} = await supabase.from(URL).select("*");
         
         if (error) throw error;
-        console.log(data);
         setLawyers(data);
       } catch (err) {
         setError(err.message);
