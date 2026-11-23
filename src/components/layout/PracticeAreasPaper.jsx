@@ -1,10 +1,10 @@
 const practiceAreas = [
-  { name: "Administrative Law", image: "/practiceAreas/administrative.png" },
-  { name: "Contract Law", image: "/practiceAreas/contract.png" },
+  { name: "Administrative Law", image: "/practiceAreas/administrative.webp" },
+  { name: "Contract Law", image: "/practiceAreas/contract.webp" },
   { name: "Family Law", image: "/practiceAreas/familylaw.png" },
   { name: "Financial Law", image: "/practiceAreas/financial.png" },
   { name: "Land Law", image: "/practiceAreas/landlaw.png" },
-  { name: "Wills and Estates", image: "/practiceAreas/will.png" },
+  { name: "Wills and Estates", image: "/practiceAreas/will.webp" },
 ];
 
 function PracticeAreasPaper() {
