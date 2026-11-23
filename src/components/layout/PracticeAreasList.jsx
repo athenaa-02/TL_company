@@ -41,7 +41,7 @@ function PracticeAreasList() {
   return (
     <section
       aria-label="Our practice areas"
-      className="bg-white mb-16 px-6 py-16 text-heading sm:px-18 sm:py-20 lg:py-24"
+      className="bg-white relative mb-16 px-6 py-16 text-heading sm:px-18 sm:py-20 lg:py-24"
     >
       <div className="mx-auto grid max-w-[1066px] gap-y-12 md:gap-y-44">
         {practiceAreas.map((area) => (
@@ -66,6 +66,8 @@ function PracticeAreasList() {
           </article>
         ))}
       </div>
+          <div className="absolute  h-220 right-[4%] sm:right-[6%] xl:right-[10%] -bottom-70 z-20 w-1 md:w-2 bg-accent" />
+
     </section>
   );
 }
