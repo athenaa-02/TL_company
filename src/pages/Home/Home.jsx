@@ -15,7 +15,8 @@ function Home() {
           <HeroSection></HeroSection>
         </div>
 
-        <PinkSection></PinkSection>
+        <PinkSection header={'Our Slogan/why us'} paragraph={`We ensure that you'll embark on a perfectly planned, safe vacation
+        at a price you can afford.`}></PinkSection>
         <PracticalAreasGeneral></PracticalAreasGeneral>
         <LawyersGeneral></LawyersGeneral>
         <TestimonialSection></TestimonialSection>
